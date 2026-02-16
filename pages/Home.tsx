@@ -4,6 +4,7 @@ import { SERVICES, PRODUCTS } from '../constants';
 import { useCart } from '../context/CartContext';
 import heroVideo from '../images/1.mp4';
 import instituteVideo from '../images/2.mp4';
+import featuredVideo from '../images/3.mp4';
 
 const Home: React.FC = () => {
   const cart = useCart();
@@ -72,6 +73,21 @@ const Home: React.FC = () => {
       </section>
 
       {/* The Institute Section */}
+            {/* Featured Video Section */}
+            <section id="featured-video" className="py-24 px-6 bg-black flex flex-col items-center">
+              <h2 className="text-red-600 font-oswald uppercase tracking-[0.2em] mb-4">Featured Highlight</h2>
+              <div className="w-full max-w-3xl rounded overflow-hidden shadow-2xl border-2 border-red-900/20">
+                <video
+                  src={featuredVideo}
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  controls
+                  playsInline
+                />
+              </div>
+            </section>
       <section id="institute" className="py-24 px-6 bg-neutral-950">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative group overflow-hidden">
